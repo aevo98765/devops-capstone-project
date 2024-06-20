@@ -61,6 +61,7 @@ def create_accounts():
 # LIST ALL ACCOUNTS
 ######################################################################
 
+
 @app.route("/accounts", methods=["GET"])
 def get_all_accounts():
     """
@@ -70,7 +71,7 @@ def get_all_accounts():
 
     accounts = Account.all()
     if len(accounts) == 0:
-        abort(status.HTTP_404_NOT_FOUND, f"No existing accounts found.")
+        abort(status.HTTP_404_NOT_FOUND, "No existing accounts found.")
 
     return {"accounts": [account.serialize() for account in accounts]}
 
