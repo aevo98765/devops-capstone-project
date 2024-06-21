@@ -1,0 +1,3 @@
+[init : remove] Removing all files from /workspace/source ...
+
+
